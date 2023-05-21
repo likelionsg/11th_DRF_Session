@@ -12,7 +12,7 @@ urlpatterns = [
     # blog urls
     # path('create-blog/',),
     # path('list-blog/',),
-    # path('retieve-blog/',),
+    # path('retrieve-blog/',),
     # path('update-blog/',),
     # path('destroy-blog/',),
 ]
