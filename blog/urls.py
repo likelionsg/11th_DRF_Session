@@ -1,12 +1,12 @@
-from django.urls import path
+from django.urls import path, include
 from .views import *
+from rest_framework.routers import DefaultRouter
+
+router = DefaultRouter()
+
+router.register(r'user', UserViewSet)
+router.register(r'blog', BlogViewSet)
 
 urlpatterns = [
-    # user urls
-    path('user/', UserViewSet.as_view({'get':'list', 'post':'create'})),
-    path('user/<int:pk>/', UserViewSet.as_view({'get':'retrieve', 'put':'update','patch':'update','delete':'destroy'})),
-
-    # blog urls
-    path('blog/', BlogViewSet.as_view({'get':'list', 'post':'create'})),
-    path('blog/<int:pk>/', BlogViewSet.as_view({'get':'retrieve', 'put':'update','patch':'update','delete':'destroy'})),
+    path('', include(router.urls)),
 ]
