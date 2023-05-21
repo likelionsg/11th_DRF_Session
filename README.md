@@ -36,5 +36,6 @@ python3 manage.py createsuperuser
 git checkout -b blogapiview origin/blogapiview
 git checkout -b viewset origin/viewset
 git checkout -b router origin/router
+git checkout -b override origin/override
 git switch main
 ```
