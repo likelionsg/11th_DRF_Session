@@ -30,3 +30,10 @@ python3 manage.py migrate
 ```
 python3 manage.py createsuperuser
 ```
+
+## 5. 원격 브랜치 가져오기
+```
+git checkout -b blogapiview origin/blogapiview
+git checkout -b viewset origin/viewset
+git checkout -b router origin/router
+```
