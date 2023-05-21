@@ -3,16 +3,10 @@ from .views import *
 
 urlpatterns = [
     # user urls
-    path('create-user/', UserCreateAPIView.as_view()),
-    path('list-user/', UserListAPIView.as_view()),
-    path('retrieve-user/<int:pk>/', UserRetrieveAPIView.as_view()),
-    path('update-user/<int:pk>/', UserUpdateAPIView.as_view()),
-    path('destroy-user/<int:pk>/', UserDestroyAPIView.as_view()),
+    path('user/', UserViewSet.as_view({'get':'list', 'post':'create'})),
+    path('user/<int:pk>/', UserViewSet.as_view({'get':'retrieve', 'put':'update','patch':'update','delete':'destroy'})),
 
     # blog urls
-    # path('create-blog/',),
-    # path('list-blog/',),
-    # path('retrieve-blog/',),
-    # path('update-blog/',),
-    # path('destroy-blog/',),
+    path('blog/', BlogViewSet.as_view({'get':'list', 'post':'create'})),
+    path('blog/<int:pk>/', BlogViewSet.as_view({'get':'retrieve', 'put':'update','patch':'update','delete':'destroy'})),
 ]
