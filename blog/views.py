@@ -32,21 +32,26 @@ class UserDestroyAPIView(generics.DestroyAPIView):
     # lookup_field = 'name'
 
 
-class BlogCreateAPIView():
-    pass
+class BlogCreateAPIView(generics.CreateAPIView):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer
 
 
-class BlogListAPIView():
-    pass
+class BlogListAPIView(generics.ListAPIView):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer
 
 
-class BlogRetrieveAPIView():
-    pass
+class BlogRetrieveAPIView(generics.RetrieveAPIView):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer
 
 
-class BlogUpdateAPIView():
-    pass
+class BlogUpdateAPIView(generics.UpdateAPIView):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer
 
 
-class BlogDestroyAPIView():
-    pass
+class BlogDestroyAPIView(generics.DestroyAPIView):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer

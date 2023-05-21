@@ -10,9 +10,9 @@ urlpatterns = [
     path('destroy-user/<int:pk>/', UserDestroyAPIView.as_view()),
 
     # blog urls
-    # path('create-blog/',),
-    # path('list-blog/',),
-    # path('retieve-blog/',),
-    # path('update-blog/',),
-    # path('destroy-blog/',),
+    path('create-blog/', BlogCreateAPIView.as_view()),
+    path('list-blog/', BlogListAPIView.as_view()),
+    path('retrieve-blog/<int:pk>/', BlogRetrieveAPIView.as_view()),
+    path('update-blog/<int:pk>/', BlogUpdateAPIView.as_view()),
+    path('destroy-blog/<int:pk>/',BlogDestroyAPIView.as_view()),
 ]
